@@ -1,0 +1,23 @@
+version: '2'
+
+services:  
+  # the `extends` command references the `web` service in our
+  # ./cra-app/cmd.yml file.  We use everything from that one AND we run
+  # the command in this file.
+  web:
+    extends:
+      file: ./cra-app/cmd.yml
+      service: web
+    command: yarn start
+
+  story:
+    extends:
+      file: ./cra-app/cmd.yml
+      service: story
+    command: yarn run storybook
+
+  sass:
+    extends:
+      file: ./cra-app/cmd.yml
+      service: sass
+    command: sass --watch /usr/src/app/src:/usr/src/app/src
