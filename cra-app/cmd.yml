@@ -5,7 +5,7 @@ services:
   web:
     environment:
       NODE_ENV: development
-    image: sjbavier/cra-yarn-sass-storybook # the image used for the service
+    image: sjbavier/cra-yarn-storybook # the image used for the service
     ports:
       - 3001:3000 # app will be at 3001
     volumes:
@@ -15,7 +15,7 @@ services:
   story:
     environment:
       NODE_ENV: development
-    image: sjbavier/cra-yarn-sass-storybook # the image used for the service
+    image: sjbavier/cra-yarn-storybook # the image used for the service
     ports:
       - 3009:6006 # storybook will be at 3009
     volumes:

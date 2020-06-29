@@ -1,7 +1,7 @@
 # Start with Node
 FROM node:12.15.0
 
-# Install Yarn instead of npm
+# Install Yarn using curl output to stdout - pipe to bash
 RUN curl -o- -L https://yarnpkg.com/install.sh | bash
 
 # Make yarn available to SH and compose
