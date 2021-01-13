@@ -9,3 +9,18 @@ docker build -t <docker-user>/cra-storybook-dev ./cra-yarn-storybook
 docker build -t <docker-user>/sass-dev ./sass-dev
 ```
 
+Run create-react-app and getstorybook
+
+```sh
+# build the cra
+docker-compose -f ../cmd.yml run web create-react-app .
+# set up react storybook
+docker-compose -f ../cmd.yml run web getstorybook .
+```
+
+Run the containers
+
+```sh
+# run in detached mode
+docker-compose up -d
+```
