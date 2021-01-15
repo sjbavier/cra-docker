@@ -13,9 +13,9 @@ Run create-react-app and getstorybook
 
 ```sh
 # build the cra
-docker-compose -f ../cmd.yml run web create-react-app .
+docker-compose -f ./cra-app/cmd.yml run web create-react-app .
 # set up react storybook
-docker-compose -f ../cmd.yml run web getstorybook .
+docker-compose -f ./cra-app/cmd.yml run web getstorybook .
 ```
 
 Run the containers
